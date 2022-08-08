@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_data_entry_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/text_pain_intensity"
+            style="@style/Theme.PainDiary.DataEntryTextHeader"
+            android:text="@string/header_pain_intensity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_slider_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/text_low"
+            android:textColor="@color/grey_800"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_pain_intensity" />
+
+        <TextView
+            android:id="@+id/text_slider_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="37dp"
+            android:text="@string/text_high"
+            android:textColor="@color/grey_800"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_pain_intensity" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_intensity_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:stepSize="1"
+            android:value="0"
+            android:valueFrom="0"
+            android:valueTo="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_pain_intensity" />
+
+        <TextView
+            android:id="@+id/text_slider_intensity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/teal_theme_dark"
+            app:layout_constraintLeft_toRightOf="@+id/slider_intensity_level"
+            app:layout_constraintTop_toBottomOf="@+id/text_slider_high" />
+
+        <TextView
+            android:id="@+id/text_location"
+            style="@style/Theme.PainDiary.DataEntryTextHeader"
+            android:layout_marginTop="0dp"
+            android:text="@string/header_pain_area"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_intensity_level" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/pain_area_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_location"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/head_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/text_head" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/neck_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_neck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/back_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_back" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/shoulder_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_shoulder" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/facial_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_facial" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/jaw_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_jaw" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/shins_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_shins" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/elbows_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_elbows" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/abdomen_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_abdomen" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/hips_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_hips" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/knees_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/text_knees" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/text_mood"
+            style="@style/Theme.PainDiary.DataEntryTextHeader"
+            android:text="@string/text_mood"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pain_area_chip_group" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_button_toggle_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_mood">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/btnMoodGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:checkedButton="@+id/btnMoodAverage"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/btnMoodVeryLow"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_baseline_very_low_24"
+                    android:text="@string/text_very_low"
+                    android:tooltipText="very low mood" />
+
+                <Button
+                    android:id="@+id/btnMoodLow"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_baseline_low_24"
+                    android:text="@string/text_low"
+                    android:tooltipText="low mood" />
+
+                <Button
+                    android:id="@+id/btnMoodAverage"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_baseline_average_24"
+                    android:text="@string/text_average"
+                    android:tooltipText="average mood" />
+
+                <Button
+                    android:id="@+id/btnMoodGood"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_baseline_average_24"
+                    android:text="@string/text_good"
+                    android:tooltipText="good mood" />
+
+                <Button
+                    android:id="@+id/btnMoodVeryGood"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_baseline_average_24"
+                    android:text="@string/text_very_good"
+                    android:tooltipText="very good mood" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text_goal"
+            style="@style/Theme.PainDiary.DataEntryTextHeader"
+            android:layout_marginTop="15dp"
+            android:text="@string/header_daily_step_goal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_button_toggle_group" />
+
+        <LinearLayout
+            android:id="@+id/layout_goal_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_goal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_step_count"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="2"
+                android:hint="@string/hint_enter_step_count"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:boxStrokeWidthFocused="2dp"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/black"
+                app:startIconTint="@color/black"
+                app:suffixText="/10000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_step_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:tooltipText="Enter step count" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_goal"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_goal"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:boxStrokeWidthFocused="2dp"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/black"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="@string/default_goal"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:tooltipText="Enter step count" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/control_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top|end"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_goal_steps">
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="2"
+                android:padding="0dp"
+                android:text="@string/text_save"
+                android:tooltipText="Save Changes" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/text_edit"
+                android:tooltipText="Edit Changes" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

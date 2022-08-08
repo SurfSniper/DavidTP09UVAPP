@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/gp1">
+        <item
+            android:id="@+id/nav_home_fragment"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"
+            app:showAsAction="always" />
+    </group>
+    <group android:id="@+id/gp2">
+        <item
+            android:id="@+id/nav_pain_data_entry_fragment"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_edit_note_24"
+            android:title="Add Entry"
+            app:showAsAction="always" />
+    </group>
+    <group android:id="@+id/gp3">
+        <item
+            android:id="@+id/nav_pain_record_view_fragment"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_notes_24"
+            android:title="Pain Entries"
+            app:showAsAction="always" />
+    </group>
+    <group android:id="@+id/gp4">
+        <item
+            android:id="@+id/nav_report_view_fragment"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_insert_chart_outlined_24"
+            android:title="Reports"
+            app:showAsAction="always" />
+    </group>
+    <group android:id="@+id/gp5">
+        <item
+            android:id="@+id/nav_map_view_fragment"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Map"
+            app:showAsAction="always" />
+    </group>
+
+    <group android:id="@+id/gp6">
+        <item
+            android:id="@+id/btn_sign_out"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_logout_24"
+            android:title="Sign out"
+            app:showAsAction="always" />
+    </group>
+
+    <group android:id="@+id/gp7">
+        <item
+            android:id="@+id/btn_dummy_records"
+            android:actionLayout="@layout/menu_item_layout"
+            android:icon="@drawable/ic_baseline_add_24"
+            android:title="Generate Dummy data"
+            app:showAsAction="always"
+            android:visible="false"/>
+    </group>
+
+</menu>

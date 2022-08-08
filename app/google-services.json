@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367627508768",
+    "firebase_url": "https://android-assignment-vivek-default-rtdb.firebaseio.com",
+    "project_id": "android-assignment-vivek",
+    "storage_bucket": "android-assignment-vivek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367627508768:android:15836c5a945f912a46b045",
+        "android_client_info": {
+          "package_name": "com.monash.paindiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367627508768-75m2qmala17undjlp8khut65lvp4i4ri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monash.paindiary",
+            "certificate_hash": "e017ce840b68857fd3dc9d7dba561d43e598efce"
+          }
+        },
+        {
+          "client_id": "367627508768-a0biptdj0tlfnp77pu6orop2iiaghj3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABKJqzC6zm3ph82HYv9Zzy0TeeSj0l9-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367627508768-a0biptdj0tlfnp77pu6orop2iiaghj3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

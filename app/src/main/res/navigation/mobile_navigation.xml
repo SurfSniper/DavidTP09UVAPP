@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home_fragment">
+
+    <fragment
+        android:id="@+id/nav_home_fragment"
+        android:name="com.monash.paindiary.fragments.HomeFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/nav_pain_record_view_fragment"
+        android:name="com.monash.paindiary.fragments.PainRecordViewFragment"
+        android:label="Pain Entries" />
+    <fragment
+        android:id="@+id/nav_pain_data_entry_fragment"
+        android:name="com.monash.paindiary.fragments.PainDataEntryFragment"
+        android:label="Add Entry" />
+
+    <fragment
+        android:id="@+id/nav_report_view_fragment"
+        android:name="com.monash.paindiary.fragments.ReportViewFragment"
+        android:label="Reports" />
+</navigation>
